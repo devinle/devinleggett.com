@@ -102,9 +102,10 @@ const subTitle = "Styleguide";
 			onchange="if(this.value) window.location.href = '/styleguide/' + this.value;"
 			aria-label="Navigate styleguide sections"
 		>
-			<option value="buttons" selected={Astro.url.pathname.endsWith('/buttons')}>Buttons</option>
-			<option value="color" selected={Astro.url.pathname.endsWith('/color')}>Color</option>
-			<option value="typography" selected={Astro.url.pathname.endsWith('/typography')}>Typography</option>
+			<option value="">Choose:</option>
+			<option value="buttons" selected={Astro.url.pathname.includes('/buttons')}>Buttons</option>
+			<option value="color" selected={Astro.url.pathname.includes('/color')}>Color</option>
+			<option value="typography" selected={Astro.url.pathname.includes('/typography')}>Typography</option>
 		</select>
 		<div class="container">
 			<slot />
