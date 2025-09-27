@@ -1,25 +1,36 @@
+@layer color, type, buttons;
+
 /* Theme */
+@import './tokens/color.css';
+@import './tokens/type.css';
+@import './tokens/buttons.css';
+
 @layer theme {
 	:root {
+		/* this has to be set to switch between light or dark */
+		color-scheme: light dark;
+
 		/* Typography: Font family with optimized fallbacks */
-		--typography-font-family-serif: 'Libre Baskerville', 'Libre Baskerville Fallback', 'Times New Roman', 'Times', serif;
-		--typography-font-family-sans: 'Montserrat', 'Montserrat Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-	}
+		--typography-font-family-serif:
+			'Libre Baskerville', 'Libre Baskerville Fallback',
+			'Times New Roman', 'Times', serif;
+		--typography-font-family-sans:
+			'Montserrat', 'Montserrat Fallback', -apple-system,
+			BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+			'Cantarell', sans-serif;
 
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--color-background: var(--color-dark);
-			--color-foreground: var(--color-light);
-			--color-shadow: var(--color-shadow-light);
-		}
-	}
-
-	@media (prefers-color-scheme: light) {
-		:root {
-			--color-background: var(--color-light);
-			--color-foreground: var(--color-dark);
-			--color-shadow: var(--color-shadow-dark);
-		}
+		/* Colors */
+		--color-accent: light-dark(var(--color-sunrise), var(--color-sky));
+		--color-background: light-dark(
+			var(--color-light),
+			var(--color-darknight)
+		);
+		--color-foreground: light-dark(var(--color-dark), var(--color-light));
+		--color-shadow: light-dark(
+			var(--color-shadow-light),
+			var(--color-shadow-dark)
+		);
+		--color-button-text: light-dark(var(--color-light), var(--color-dark));
 	}
 
 	body {

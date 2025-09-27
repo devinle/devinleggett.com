@@ -5,10 +5,54 @@ import StyleguideLayout from '../../layouts/Styleguide.astro';
 
 const pageTitle = "Buttons";
 const description = "should be clear, inviting, obvious, and functional.";
+const label = "Learn more";
 ---
 
+<style>
+	section {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	small {
+		display: block;
+		font-family: var(--typography-font-family-sans);
+		font-size: var(--typography-font-size-small);
+		font-weight: var(--typography-font-weight-normal);
+		margin-top: 1rem;
+		text-align: center;
+		text-transform: lowercase;
+	}
+
+</style>
 <StyleguideLayout pageTitle={pageTitle} description={description}>
 	<Layout>
 		<Header title={pageTitle} description={description} />
+		<section>
+			<p>
+				<button class="button button--text">{label}</button>
+				<small>Button text</small>
+			</p>
+			<p>
+				<button class="button button--small">{label}</button>
+				<small>Button small</small>
+			</p>
+			<p>
+				<button class="button button--medium">{label}</button>
+				<small>Button medium</small>
+			</p>
+			<p>
+				<button class="button button--large">{label}</button>
+				<small>Button large</small>
+			</p>
+			<p>
+				<button class="button button--small">Login</button>
+				<span class="ff-serif fs-italic fs-sm" aria-hidden="true"> or </span>
+				<button class="button button--text">Signup</button>
+				<small>Button with login</small>
+			</p>
+		</section>
 	</Layout>
 </StyleguideLayout>

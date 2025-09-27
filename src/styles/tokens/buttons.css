@@ -1,0 +1,33 @@
+@layer buttons {
+	.button {
+		background-color: var(--color-accent);
+		border: none;
+		border-radius: 50px;
+		box-shadow: 0 0 0 3px rgb(0 0 0 / 20%) inset;
+		color: var(--color-button-text);
+		cursor: pointer;
+		font-family: var(--typography-font-family-sans);
+		font-weight: var(--typography-font-weight-black);
+		padding: 1rem 2rem;
+		transition: filter 0.1s ease;
+
+		&:hover {
+			filter: brightness(70%);
+		}
+	}
+
+	.button--text {
+		background-color: transparent;
+		box-shadow: none;
+		color: var(--color-accent);
+		text-decoration: underline;
+	}
+
+	.button--medium {
+		font-size: var(--typography-font-size-h5);
+	}
+
+	.button--large {
+		font-size: var(--typography-font-size-h4);
+	}
+}

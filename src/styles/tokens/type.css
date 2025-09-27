@@ -59,6 +59,11 @@
 			1rem + 0.125vw,
 			1.125rem
 		); /* Medium text */
+		--typography-font-size-h6: clamp(
+			0.875rem,
+			0.875rem + 0.125vw,
+			1rem
+		); /* Small text */
 		--typography-font-size-body: clamp(
 			0.875rem,
 			0.875rem + 0.125vw,
@@ -157,79 +162,103 @@
 		line-height: var(--typography-line-height-loose, 1.7);
 		text-transform: var(--typography-text-transform-uppercase, uppercase);
 	}
-
-	/* Container Queries for component-based responsive design */
-	@container (min-width: 768px) {
-		h1 {
-			font-size: var(--typography-font-size-display);
-		}
-
-		h2 {
-			font-size: var(--typography-font-size-h1);
-		}
-
-		h3 {
-			font-size: var(--typography-font-size-h2);
-		}
-
-		h4 {
-			font-size: var(--typography-font-size-h3);
-		}
-
-		h5 {
-			font-size: var(--typography-font-size-h4);
-		}
-
-		h6 {
-			font-size: var(--typography-font-size-h5);
-		}
-
-		p {
-			font-size: var(--typography-font-size-body);
-		}
-
-		small {
-			font-size: var(--typography-font-size-small);
-		}
-	}
 }
 
 @layer utilities {
 	/* Utility classes */
 
 	/* Font Weight */
-	.fw-normal { font-weight: var(--typography-font-weight-normal, 400); }
-	.fw-bold { font-weight: var(--typography-font-weight-bold, 700); }
-	.fw-black { font-weight: var(--typography-font-weight-black, 900); }
+	.fw-normal {
+		font-weight: var(--typography-font-weight-normal, 400);
+	}
+	.fw-bold {
+		font-weight: var(--typography-font-weight-bold, 700);
+	}
+	.fw-black {
+		font-weight: var(--typography-font-weight-black, 900);
+	}
 
 	/* Font Family */
-	.ff-sans { font-family: var(--typography-font-family-sans, 'Montserrat', sans-serif); }
-	.ff-serif { font-family: var(--typography-font-family-serif, 'Libre Baskerville', serif); }
+	.ff-sans {
+		font-family: var(
+			--typography-font-family-sans,
+			'Montserrat',
+			sans-serif
+		);
+	}
+	.ff-serif {
+		font-family: var(
+			--typography-font-family-serif,
+			'Libre Baskerville',
+			serif
+		);
+	}
 
 	/* Font Style */
-	.fs-normal { font-style: var(--typography-font-style-normal, normal); }
-	.fs-italic { font-style: var(--typography-font-style-italic, italic); }
+	.fs-normal {
+		font-style: var(--typography-font-style-normal, normal);
+	}
+	.fs-italic {
+		font-style: var(--typography-font-style-italic, italic);
+	}
 
 	/* Font Size */
-	.fs-display { font-size: var(--typography-font-size-display, 2.5rem); }
-	.fs-h1 { font-size: var(--typography-font-size-h1, 2rem); }
-	.fs-h2 { font-size: var(--typography-font-size-h2, 1.75rem); }
-	.fs-h3 { font-size: var(--typography-font-size-h3, 1.5rem); }
-	.fs-h4 { font-size: var(--typography-font-size-h4, 1.25rem); }
-	.fs-h5 { font-size: var(--typography-font-size-h5, 1rem); }
-	.fs-h6 { font-size: var(--typography-font-size-h6, 0.875rem); }
-	.fs-body { font-size: var(--typography-font-size-body, 0.875rem); }
-	.fs-sm { font-size: var(--typography-font-size-small, 0.75rem); }
+	.fs-display {
+		font-size: var(--typography-font-size-display, 2.5rem);
+	}
+	.fs-h1 {
+		font-size: var(--typography-font-size-h1, 2rem);
+	}
+	.fs-h2 {
+		font-size: var(--typography-font-size-h2, 1.75rem);
+	}
+	.fs-h3 {
+		font-size: var(--typography-font-size-h3, 1.5rem);
+	}
+	.fs-h4 {
+		font-size: var(--typography-font-size-h4, 1.25rem);
+	}
+	.fs-h5 {
+		font-size: var(--typography-font-size-h5, 1rem);
+	}
+	.fs-h6 {
+		font-size: var(--typography-font-size-h6, 0.875rem);
+	}
+	.fs-body {
+		font-size: var(--typography-font-size-body, 0.875rem);
+	}
+	.fs-sm {
+		font-size: var(--typography-font-size-small, 0.75rem);
+	}
 
 	/* Line Height */
-	.lh-tight { line-height: var(--typography-line-height-tight, 1.22); }
-	.lh-normal { line-height: var(--typography-line-height-normal, 1.33); }
-	.lh-relaxed { line-height: var(--typography-line-height-relaxed, 1.48); }
-	.lh-comfortable { line-height: var(--typography-line-height-comfortable, 1.62); }
-	.lh-loose { line-height: var(--typography-line-height-loose, 1.7); }
-	.lh-very-loose { line-height: var(--typography-line-height-very-loose, 1.8); }
-	.lh-max { line-height: var(--typography-line-height-maximum, 1.98); }
+	.lh-tight {
+		line-height: var(--typography-line-height-tight, 1.22);
+	}
+	.lh-normal {
+		line-height: var(--typography-line-height-normal, 1.33);
+	}
+	.lh-relaxed {
+		line-height: var(--typography-line-height-relaxed, 1.48);
+	}
+	.lh-comfortable {
+		line-height: var(--typography-line-height-comfortable, 1.62);
+	}
+	.lh-loose {
+		line-height: var(--typography-line-height-loose, 1.7);
+	}
+	.lh-very-loose {
+		line-height: var(--typography-line-height-very-loose, 1.8);
+	}
+	.lh-max {
+		line-height: var(--typography-line-height-maximum, 1.98);
+	}
 
 	/* Text Transform */
-	.tt-upper { text-transform: var(--typography-text-transform-uppercase, uppercase); }
+	.tt-upper {
+		text-transform: var(--typography-text-transform-uppercase, uppercase);
+	}
+	.tt-lower {
+		text-transform: var(--typography-text-transform-lowercase, lowercase);
+	}
 }
