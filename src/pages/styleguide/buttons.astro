@@ -1,0 +1,14 @@
+---
+import Header from '../../components/styleguide/Header.astro';
+import Layout from '../../components/styleguide/Layout.astro';
+import StyleguideLayout from '../../layouts/Styleguide.astro';
+
+const pageTitle = "Buttons";
+const description = "should be clear, inviting, obvious, and functional.";
+---
+
+<StyleguideLayout pageTitle={pageTitle} description={description}>
+	<Layout>
+		<Header title={pageTitle} description={description} />
+	</Layout>
+</StyleguideLayout>

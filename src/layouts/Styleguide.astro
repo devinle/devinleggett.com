@@ -74,6 +74,17 @@ const subTitle = "Styleguide";
 				padding: 2rem 3rem 2rem 1rem;
 			}
 
+			select {
+				font-family: var(--typography-font-family-sans);
+				font-size: var(--typography-font-size-small);
+				padding: 0.5rem 1rem;
+				position: fixed;
+				bottom: 0;
+				left: 2rem;
+				max-width: 220px;
+				width: 100%;
+			}
+
 			@media (min-width: 992px) {
 				.container {
 					padding: 4rem 4rem 2rem 2rem;
@@ -87,6 +98,14 @@ const subTitle = "Styleguide";
 	</head>
 	<body>
 		<Title title={pageTitle} subTitle={subTitle} />
+		<select
+			onchange="if(this.value) window.location.href = '/styleguide/' + this.value;"
+			aria-label="Navigate styleguide sections"
+		>
+			<option value="buttons" selected={Astro.url.pathname.endsWith('/buttons')}>Buttons</option>
+			<option value="color" selected={Astro.url.pathname.endsWith('/color')}>Color</option>
+			<option value="typography" selected={Astro.url.pathname.endsWith('/typography')}>Typography</option>
+		</select>
 		<div class="container">
 			<slot />
 		</div>
