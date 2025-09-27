@@ -13,7 +13,7 @@ const label = "Learn more";
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		gap: 0;
+		gap: 1rem;
 	}
 
 	small {
@@ -21,7 +21,7 @@ const label = "Learn more";
 		font-family: var(--typography-font-family-sans);
 		font-size: var(--typography-font-size-small);
 		font-weight: var(--typography-font-weight-normal);
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 		text-align: center;
 		text-transform: lowercase;
 	}
@@ -31,28 +31,28 @@ const label = "Learn more";
 	<Layout>
 		<Header title={pageTitle} description={description} />
 		<section>
-			<p>
+			<div>
 				<button class="button button--text">{label}</button>
 				<small>Button text</small>
-			</p>
-			<p>
+			</div>
+			<div>
 				<button class="button button--small">{label}</button>
 				<small>Button small</small>
-			</p>
-			<p>
+			</div>
+			<div>
 				<button class="button button--medium">{label}</button>
 				<small>Button medium</small>
-			</p>
-			<p>
+			</div>
+			<div>
 				<button class="button button--large">{label}</button>
 				<small>Button large</small>
-			</p>
-			<p>
+			</div>
+			<div>
 				<button class="button button--small">Login</button>
 				<span class="ff-serif fs-italic fs-sm" aria-hidden="true"> or </span>
 				<button class="button button--text">Signup</button>
 				<small>Button with login</small>
-			</p>
+			</div>
 		</section>
 	</Layout>
 </StyleguideLayout>
