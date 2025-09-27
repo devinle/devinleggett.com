@@ -1,0 +1,27 @@
+<style>
+	div {
+		header {
+			max-width: 300px;
+			h2 {
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		@media (min-width: 992px) {
+			align-items: baseline;
+			display: grid;
+			gap: 4rem;
+			grid-template-columns: 220px auto;
+
+			header {
+				max-width: unset;
+				position: sticky;
+				top: 2rem;
+			}
+		}
+	}
+</style>
+
+<div>
+	<slot />
+</div>

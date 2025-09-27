@@ -1,0 +1,25 @@
+---
+const { title, subTitle } = Astro.props;
+---
+
+<style>
+	header {
+		background: var(--color-daydream);
+		bottom: 0;
+		color: var(--color-dark);
+		padding: 1.5rem 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 32px;
+		h1, span {
+			line-height: 30px;
+			margin-bottom: 0.5rem;
+			writing-mode: vertical-lr;
+		}
+	}
+</style>
+<header>
+	<h1 class="fs-h6 tt-upper">{title}</h1>
+	<span class="ff-sans tt-upper fs-h6">{subTitle}</span>
+</header>

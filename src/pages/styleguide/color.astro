@@ -1,0 +1,45 @@
+---
+import Header from '../../components/styleguide/Header.astro';
+import Layout from '../../components/styleguide/Layout.astro';
+import Swatch from '../../components/styleguide/Swatch.astro';
+import StyleguideLayout from '../../layouts/Styleguide.astro';
+
+const pageTitle = "Color";
+const description = "will energize with bright, warm, and welcoming tones.";
+---
+
+<style>
+	section {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(2, 1fr);
+		
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>
+<StyleguideLayout pageTitle={pageTitle} description={description}>
+	<Layout>
+		<Header title={pageTitle} description={description} />
+		<section>
+			<div>
+				<h3 class="fs-h5 tt-upper">Copy</h3>
+				<Swatch color="var(--color-light)" name="Light" hexCode="#FDFFF3" />
+				<Swatch color="var(--color-dark)" name="Dark" hexCode="#0b0704" />
+			</div>
+
+			<div>
+				<h3 class="fs-h5 tt-upper">Accent</h3>
+				<Swatch color="var(--color-sky)" name="Sky" hexCode="#47c8ef" />
+				<Swatch color="var(--color-sunrise)" name="Sunrise" hexCode="#EC6F2B" />
+			</div>
+
+			<div>
+				<h3 class="fs-h5 tt-upper">Background</h3>
+				<Swatch color="var(--color-daydream)" name="Daydream" hexCode="#0DF4F4, #84D47F" />
+				<Swatch color="var(--color-darknight)" name="Darknight" hexCode="#0B0704, #080703" />
+			</div>
+		</section>
+	</Layout>
+</StyleguideLayout>

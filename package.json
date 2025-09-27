@@ -1,14 +1,29 @@
 {
-  "name": "astro",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.13.10"
-  }
+	"name": "astro",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "eslint . --ext .js,.ts,.astro",
+		"lint:fix": "eslint . --ext .js,.ts,.astro --fix",
+		"lint:check": "eslint . --ext .js,.ts,.astro --max-warnings 0",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
+	},
+	"dependencies": {
+		"astro": "^5.13.10"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"eslint": "^8.57.1",
+		"eslint-plugin-astro": "^0.34.0",
+		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"prettier": "^3.6.2",
+		"typescript": "^5.9.2"
+	}
 }

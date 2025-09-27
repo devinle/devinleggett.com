@@ -1,0 +1,76 @@
+---
+import Header from '../../components/styleguide/Header.astro';
+import Layout from '../../components/styleguide/Layout.astro';
+import StyleguideLayout from '../../layouts/Styleguide.astro';
+
+const pageTitle = "Typography";
+const description = "A styleguide for the typography system.";
+const sentence = "The quick brown fox jumps over the lazy dog.";
+---
+<style>
+	section {
+		h1, h2, h3, h4, h5, h6, p, small {
+			align-items: baseline;
+			display: grid;
+			grid-template-columns: 40px auto;
+			gap: 2rem;
+
+			&::before {
+				content: attr(data-label);
+				font-family: var(--typography-font-family-sans);
+				font-size: var(--typography-font-size-small);
+				font-weight: var(--typography-font-weight-normal);
+				text-align: right;
+				text-transform: lowercase;
+			}
+		}
+	}
+</style>
+
+<StyleguideLayout pageTitle={pageTitle} description={description}>
+	<Layout>
+		<Header title="Montserrat" description="will provide headings with a geometric, humanist and welcoming tone." />
+		<section>
+			<h1 data-label="h1">{sentence}</h1>
+			<h2 data-label="h2">{sentence}</h2>
+			<h3 data-label="h3">{sentence}</h3>
+			<h4 data-label="h4">{sentence}</h4>
+			<h5 data-label="h5">{sentence}</h5>
+			<h6 data-label="h6">{sentence}</h6>
+			<p data-label="p">{sentence}</p>
+			<small data-label="small">{sentence}</small>
+			<br />
+			<h1 class="fw-normal" data-label="h1">{sentence}</h1>
+			<h2 class="fw-normal" data-label="h2">{sentence}</h2>
+			<h3 class="fw-normal" data-label="h3">{sentence}</h3>
+			<h4 class="fw-normal" data-label="h4">{sentence}</h4>
+			<h5 class="fw-normal" data-label="h5">{sentence}</h5>
+			<h6 class="fw-normal" data-label="h6">{sentence}</h6>
+			<p class="fw-normal" data-label="p">{sentence}</p>
+			<small class="fw-normal" data-label="small">{sentence}</small>
+		</section>
+	</Layout>
+
+	<Layout>
+		<Header title="Libre Baskerville" description="will provide long form copy with a familiar, readable, book-like quality." />
+		<section>
+			<h1 class="ff-serif fw-bold lh-normal" data-label="h1">{sentence}</h1>
+			<h2 class="ff-serif fw-bold lh-normal" data-label="h2">{sentence}</h2>
+			<h3 class="ff-serif fw-bold" data-label="h3">{sentence}</h3>
+			<h4 class="ff-serif fw-bold lh-comfortable" data-label="h4">{sentence}</h4>
+			<h5 class="ff-serif fw-bold lh-comfortable" data-label="h5">{sentence}</h5>
+			<h6 class="ff-serif fw-bold" data-label="h6">{sentence}</h6>
+			<p class="ff-serif fw-normal" data-label="p">{sentence}</p>
+			<small class="ff-serif fs-sm fw-normal" data-label="small">{sentence}</small>
+			<br />
+			<h1 class="ff-serif fs-italic fw-normal lh-normal" data-label="h1">{sentence}</h1>
+			<h2 class="ff-serif fs-italic fw-normal lh-normal" data-label="h2">{sentence}</h2>
+			<h3 class="ff-serif fs-italic fw-normal" data-label="h3">{sentence}</h3>
+			<h4 class="ff-serif fs-italic fw-normal lh-comfortable" data-label="h4">{sentence}</h4>
+			<h5 class="ff-serif fs-italic fw-normal lh-loose" data-label="h5">{sentence}</h5>
+			<h6 class="ff-serif fs-italic fw-normal" data-label="h6">{sentence}</h6>
+			<p class="ff-serif fs-italic fw-normal" data-label="p">{sentence}</p>
+			<small class="ff-serif fs-italic fw-normal" data-label="small">{sentence}</small>
+		</section>
+	</Layout>
+</StyleguideLayout>

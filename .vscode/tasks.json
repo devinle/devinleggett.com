@@ -1,0 +1,52 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "ESLint: Check",
+			"type": "shell",
+			"command": "npm",
+			"args": ["run", "lint"],
+			"group": "test",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"problemMatcher": ["$eslint-stylish"]
+		},
+		{
+			"label": "ESLint: Fix",
+			"type": "shell",
+			"command": "npm",
+			"args": ["run", "lint:fix"],
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"problemMatcher": ["$eslint-stylish"]
+		},
+		{
+			"label": "Prettier: Format",
+			"type": "shell",
+			"command": "npm",
+			"args": ["run", "format"],
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		}
+	]
+}

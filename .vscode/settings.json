@@ -1,0 +1,57 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"eslint.validate": ["javascript", "typescript", "astro"],
+	"eslint.format.enable": true,
+	"eslint.enable": true,
+	"eslint.run": "onType",
+	"eslint.autoFixOnSave": true,
+	"eslint.alwaysShowStatus": true,
+	"eslint.showOutputChannelOn": "error",
+	"eslint.workingDirectories": ["."],
+	"eslint.options": {
+		"extensions": [".js", ".ts", ".astro"]
+	},
+	"problems.decorations.enabled": true,
+	"editor.renderWhitespace": "boundary",
+	"editor.rulers": [80, 120],
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.eol": "\n",
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.tabSize": 4,
+	"workbench.colorCustomizations": {
+		"editorError.foreground": "#ff6b6b",
+		"editorWarning.foreground": "#ffd93d",
+		"editorInfo.foreground": "#74c0fc"
+	}
+}

@@ -1,0 +1,94 @@
+---
+import Title from '../components/styleguide/Title.astro';
+import '../styles/color.css';
+import '../styles/reset.css';
+import '../styles/theme.css';
+import '../styles/type.css';
+
+const { 
+	pageTitle, 
+	description = "A modern Astro website with optimized typography and performance",
+	canonicalURL = Astro.url.href,
+	ogImage = "/favicon.svg",
+	noindex = false,
+} = Astro.props;
+const subTitle = "Styleguide";
+---
+
+<html lang="en">
+	<head>
+		<!-- Essential meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO and social meta tags -->
+		<title>{pageTitle} / {subTitle}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={pageTitle} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
+		
+		<!-- Robots -->
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+		
+		<!-- Favicon and icons -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		
+		<!-- Optimized font loading -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+		<!-- Preload critical fonts to prevent CLS -->
+		<link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXpsog.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="https://fonts.gstatic.com/s/librebaskerville/v14/kmKnZrc3Hgbbcjq75U4uslyuy4kn0pNeYc4sw.woff2" as="font" type="font/woff2" crossorigin>
+		
+		<!-- Load only specific font weights with optimized loading -->
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+		
+		<!-- Performance hints -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+		
+		<!-- Font loading optimization -->
+		<style>
+			/* Prevent invisible text during font load */
+			.font-loading {
+				font-display: swap;
+			}
+
+			.container {
+				padding: 2rem 3rem 2rem 1rem;
+			}
+
+			@media (min-width: 992px) {
+				.container {
+					padding: 4rem 4rem 2rem 2rem;
+				}
+			}
+		</style>
+		
+		<!-- Theme color for mobile browsers -->
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+	</head>
+	<body>
+		<Title title={pageTitle} subTitle={subTitle} />
+		<div class="container">
+			<slot />
+		</div>
+	</body>
+</html>

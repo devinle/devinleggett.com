@@ -1,0 +1,12 @@
+@layer color {
+	:root {
+		--color-dark: #0b0704;
+		--color-light: #fdfff3;
+		--color-sky: #47c8ef;
+		--color-sunrise: #ec6f2b;
+		--color-daydream: linear-gradient(to bottom, #0df4f4, #84d47f);
+		--color-darknight: linear-gradient(to bottom, #0b0704, #080703);
+		--color-shadow-light: 0 0 8px 0 rgb(13 244 244 / 25%);
+		--color-shadow-dark: 0 0 8px 0 rgb(11 7 4 / 25%);
+	}
+}

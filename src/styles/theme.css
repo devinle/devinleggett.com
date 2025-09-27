@@ -1,0 +1,29 @@
+/* Theme */
+@layer theme {
+	:root {
+		/* Typography: Font family with optimized fallbacks */
+		--typography-font-family-serif: 'Libre Baskerville', 'Libre Baskerville Fallback', 'Times New Roman', 'Times', serif;
+		--typography-font-family-sans: 'Montserrat', 'Montserrat Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-background: var(--color-dark);
+			--color-foreground: var(--color-light);
+			--color-shadow: var(--color-shadow-light);
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--color-background: var(--color-light);
+			--color-foreground: var(--color-dark);
+			--color-shadow: var(--color-shadow-dark);
+		}
+	}
+
+	body {
+		background: var(--color-background);
+		color: var(--color-foreground);
+	}
+}

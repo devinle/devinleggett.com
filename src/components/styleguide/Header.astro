@@ -1,0 +1,25 @@
+---
+const { title, description } = Astro.props;
+---
+<style>
+	header {
+		max-width: 300px;
+		h2 {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	@media (min-width: 992px) {
+
+		header {
+			max-width: unset;
+			position: sticky;
+			top: 2rem;
+		}
+	}
+</style>
+
+<header>
+	<h2 class="fs-h4 tt-upper">{title}</h2>
+	<p class="fs-sm fw-normal ff-serif">{description}</p>
+</header>

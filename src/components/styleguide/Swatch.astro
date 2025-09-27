@@ -1,0 +1,39 @@
+---
+const { color, name, hexCode } = Astro.props;
+---
+
+<style>
+	.swatch {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1fr;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+
+	.swatch__color {
+		box-shadow: var(--color-shadow);
+		height: 0;
+		padding-bottom: 90%;
+	}
+
+	.swatch__name {
+		h4 {
+			margin-bottom: 0;
+		}
+	}
+
+	@media (min-width: 1260px) {
+		.swatch {
+			grid-template-columns: 60% 1fr;
+			margin-bottom: 3rem;
+		}
+	}
+</style>
+<div class="swatch">
+	<div class="swatch__color" style=`background: ${color};`></div>
+	<div class="swatch__name">
+		<h4 class="fs-h6 tt-upper">{name}</h4>
+		<span class="fs-sm ff-sans tt-upper">{hexCode}</span>
+	</div>
+</div>
