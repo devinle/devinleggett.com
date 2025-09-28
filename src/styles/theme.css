@@ -5,6 +5,7 @@
 @import './tokens/color.css';
 @import './tokens/type.css';
 @import './tokens/buttons.css';
+@import './tokens/tags.css';
 
 @layer theme {
 	:root {
