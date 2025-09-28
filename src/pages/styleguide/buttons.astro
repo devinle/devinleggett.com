@@ -40,35 +40,35 @@ const label = "Learn more";
 		<Header title={pageTitle} description={description} />
 		<section>
 			<div>
-				<button class="button button--text">{label}</button>
+				<button type="button" class="button button--text">{label}</button>
 				<small>button .button.button--text</small>
 			</div>
 			<div>
-				<a href="#" class="button button--text">{label}</a>
+				<a href="#" class="button button--text" role="button" aria-label={label}>{label}</a>
 				<small>a .button.button--text</small>
 			</div>
 			<div>
-				<button class="button button--small">{label}</button>
+				<button type="button" class="button button--small">{label}</button>
 				<small>button .button.button--small</small>
 			</div>
 			<div>
-				<a href="#" class="button button--small">{label}</a>
+				<a href="#" class="button button--small" role="button" aria-label={label}>{label}</a>
 				<small>a .button.button--small</small>
 			</div>
 			<div>
-				<button class="button button--medium">{label}</button>
+				<button type="button" class="button button--medium">{label}</button>
 				<small>button .button.button--medium</small>
 			</div>
 			<div>
-				<a href="#" class="button button--medium">{label}</a>
+				<a href="#" class="button button--medium" role="button" aria-label={label}>{label}</a>
 				<small>a .button.button--medium</small>
 			</div>
 			<div>
-				<button class="button button--large">{label}</button>
+				<button type="button" class="button button--large">{label}</button>
 				<small>button .button.button--large</small>
 			</div>
 			<div>
-				<a href="#" class="button button--large">{label}</a>
+				<a href="#" class="button button--large" role="button" aria-label={label}>{label}</a>
 				<small>a .button.button--large</small>
 			</div>
 		</section>

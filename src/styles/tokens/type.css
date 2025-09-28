@@ -77,12 +77,16 @@
 
 		/* Typography: Text transform */
 		--typography-text-transform-uppercase: uppercase;
+		--typography-text-transform-lowercase: lowercase;
 
 		/* Typography: Line height */
 		--typography-line-height-tight: 1.22; /* Tight spacing for large headings */
 		--typography-line-height-normal: 1.33; /* Medium spacing for headings */
+		--typography-line-height-relaxed: 1.48; /* Relaxed spacing for medium text */
 		--typography-line-height-comfortable: 1.62; /* Comfortable spacing for text */
 		--typography-line-height-loose: 1.7; /* Relaxed spacing for small text */
+		--typography-line-height-very-loose: 1.8; /* Very relaxed spacing for small text */
+		--typography-line-height-maximum: 1.98; /* Maximum spacing for body text */
 	}
 
 	/* Accessibility: Reduced motion support */

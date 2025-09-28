@@ -1,6 +1,7 @@
-@layer color, type, buttons, theme;
+@layer reset, color, type, buttons, theme;
 
 /* Theme */
+@import './utils/reset.css';
 @import './tokens/color.css';
 @import './tokens/type.css';
 @import './tokens/buttons.css';

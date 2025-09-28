@@ -1,6 +1,5 @@
 ---
 import Title from '../components/styleguide/Title.astro';
-import '../styles/utils/reset.css';
 import '../styles/theme.css';
 
 const { 
@@ -45,6 +44,7 @@ const subTitle = "Styleguide";
 		<!-- Favicon and icons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<link rel="mask-icon" href="/favicon.svg" color="#ec6f2b" />
 		
 		<!-- Optimized font loading -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,10 @@ const subTitle = "Styleguide";
 		<link rel="preload" href="https://fonts.gstatic.com/s/librebaskerville/v14/kmKnZrc3Hgbbcjq75U4uslyuy4kn0pNeYc4sw.woff2" as="font" type="font/woff2" crossorigin>
 		
 		<!-- Load only specific font weights with optimized loading -->
-		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+		<noscript>
+			<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+		</noscript>
 		
 		<!-- Performance hints -->
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -72,44 +75,20 @@ const subTitle = "Styleguide";
 				padding: 5rem 3rem 2rem 1rem;
 			}
 
-			select {
-				font-family: var(--typography-font-family-sans);
-				font-size: var(--typography-font-size-small);
-				padding: 0.5rem 1rem;
-				position: fixed;
-				top: 1rem;
-				left: 1rem;
-				max-width: 280px;
-				width: 100%;
-			}
-
 			@media (min-width: 992px) {
 				.container {
 					padding: 4rem 4rem 2rem 2rem;
-				}
-
-				select {
-					left: 2rem;
-					max-width: 220px;
 				}
 			}
 		</style>
 		
 		<!-- Theme color for mobile browsers -->
-		<meta name="theme-color" content="#ffffff" />
-		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="theme-color" content="#fdfff3" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#0b0704" media="(prefers-color-scheme: dark)" />
+		<meta name="msapplication-TileColor" content="#ec6f2b" />
 	</head>
 	<body>
 		<Title title={pageTitle} subTitle={subTitle} />
-		<select
-			onchange="if(this.value) window.location.href = '/styleguide/' + this.value;"
-			aria-label="Navigate styleguide sections"
-		>
-			<option value="">Choose:</option>
-			<option value="buttons" selected={Astro.url.pathname.includes('/buttons')}>Buttons</option>
-			<option value="color" selected={Astro.url.pathname.includes('/color')}>Color</option>
-			<option value="typography" selected={Astro.url.pathname.includes('/typography')}>Typography</option>
-		</select>
 		<div class="container">
 			<slot />
 		</div>
