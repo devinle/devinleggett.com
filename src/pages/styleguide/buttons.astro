@@ -11,9 +11,17 @@ const label = "Learn more";
 <style>
 	section {
 		align-items: center;
+		justify-items: center;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	div {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		align-items: center;
+		justify-content: center;
 	}
 
 	small {
@@ -33,25 +41,35 @@ const label = "Learn more";
 		<section>
 			<div>
 				<button class="button button--text">{label}</button>
-				<small>Button text</small>
+				<small>button .button.button--text</small>
+			</div>
+			<div>
+				<a href="#" class="button button--text">{label}</a>
+				<small>a .button.button--text</small>
 			</div>
 			<div>
 				<button class="button button--small">{label}</button>
-				<small>Button small</small>
+				<small>button .button.button--small</small>
+			</div>
+			<div>
+				<a href="#" class="button button--small">{label}</a>
+				<small>a .button.button--small</small>
 			</div>
 			<div>
 				<button class="button button--medium">{label}</button>
-				<small>Button medium</small>
+				<small>button .button.button--medium</small>
+			</div>
+			<div>
+				<a href="#" class="button button--medium">{label}</a>
+				<small>a .button.button--medium</small>
 			</div>
 			<div>
 				<button class="button button--large">{label}</button>
-				<small>Button large</small>
+				<small>button .button.button--large</small>
 			</div>
 			<div>
-				<button class="button button--small">Login</button>
-				<span class="ff-serif fs-italic fs-sm" aria-hidden="true"> or </span>
-				<button class="button button--text">Signup</button>
-				<small>Button with login</small>
+				<a href="#" class="button button--large">{label}</a>
+				<small>a .button.button--large</small>
 			</div>
 		</section>
 	</Layout>

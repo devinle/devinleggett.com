@@ -9,10 +9,14 @@
 		font-family: var(--typography-font-family-sans);
 		font-weight: var(--typography-font-weight-black);
 		padding: 1rem 2rem;
-		transition: filter 0.1s ease;
+		transition:
+			filter 0.3s ease,
+			scale 0.1s ease;
+		text-align: center;
 
 		&:hover {
-			filter: brightness(70%);
+			filter: brightness(120%);
+			scale: 1.05;
 		}
 	}
 
@@ -23,11 +27,18 @@
 		text-decoration: underline;
 	}
 
+	.button--small {
+		font-size: var(--typography-font-size-h6);
+		text-decoration: none;
+	}
+
 	.button--medium {
 		font-size: var(--typography-font-size-h5);
+		text-decoration: none;
 	}
 
 	.button--large {
 		font-size: var(--typography-font-size-h4);
+		text-decoration: none;
 	}
 }

@@ -162,6 +162,15 @@
 		line-height: var(--typography-line-height-loose, 1.7);
 		text-transform: var(--typography-text-transform-uppercase, uppercase);
 	}
+
+	a {
+		color: var(--color-accent);
+		transition: filter 0.3s ease;
+
+		&:hover {
+			filter: brightness(120%);
+		}
+	}
 }
 
 @layer utilities {

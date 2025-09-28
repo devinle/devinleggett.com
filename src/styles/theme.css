@@ -1,4 +1,4 @@
-@layer color, type, buttons;
+@layer color, type, buttons, theme;
 
 /* Theme */
 @import './tokens/color.css';
@@ -26,15 +26,28 @@
 			var(--color-darknight)
 		);
 		--color-foreground: light-dark(var(--color-dark), var(--color-light));
-		--color-shadow: light-dark(
+		/* --color-shadow: light-dark(
 			var(--color-shadow-light),
 			var(--color-shadow-dark)
-		);
+		); */
 		--color-button-text: light-dark(var(--color-light), var(--color-dark));
 	}
 
 	body {
 		background: var(--color-background);
 		color: var(--color-foreground);
+	}
+
+	/* Shadow is a bit tricky because it's a gradient, and doesn't work with light-dark */
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-shadow: var(--color-shadow-light);
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--color-shadow: var(--color-shadow-dark);
+		}
 	}
 }
